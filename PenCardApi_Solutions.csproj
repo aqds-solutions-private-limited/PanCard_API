@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5239EF29-C407-4793-AEA7-5D5BD6350B78}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PenCardApi_Solutions</RootNamespace>
+    <AssemblyName>PenCardApi_Solutions</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Agent_Login1.aspx" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\font-face.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\main_add_mem.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\owl.theme.default.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\theme.css" />
+    <Content Include="css\util.css" />
+    <Content Include="data1\images\chrysanthemum.jpg" />
+    <Content Include="data1\images\desert.jpg" />
+    <Content Include="data1\images\hydrangeas.jpg" />
+    <Content Include="data1\images\icons\favicon.ico" />
+    <Content Include="data1\images\img-01.png" />
+    <Content Include="data1\images\jellyfish.jpg" />
+    <Content Include="data1\images\koala.jpg" />
+    <Content Include="data1\images\lighthouse.jpg" />
+    <Content Include="data1\images\penguins.jpg" />
+    <Content Include="data1\images\tulips.jpg" />
+    <Content Include="data1\tooltips\chrysanthemum.jpg" />
+    <Content Include="data1\tooltips\desert.jpg" />
+    <Content Include="data1\tooltips\hydrangeas.jpg" />
+    <Content Include="data1\tooltips\jellyfish.jpg" />
+    <Content Include="data1\tooltips\koala.jpg" />
+    <Content Include="data1\tooltips\lighthouse.jpg" />
+    <Content Include="data1\tooltips\penguins.jpg" />
+    <Content Include="data1\tooltips\tulips.jpg" />
+    <Content Include="engine1\arrows.png" />
+    <Content Include="engine1\bullet.png" />
+    <Content Include="engine1\jquery.js" />
+    <Content Include="engine1\pause.png" />
+    <Content Include="engine1\play.png" />
+    <Content Include="engine1\script.js" />
+    <Content Include="engine1\style.css" />
+    <Content Include="engine1\style.mod.css" />
+    <Content Include="engine1\triangle.png" />
+    <Content Include="engine1\wowslider.js" />
+    <Content Include="engine1\wowslider.mod.js" />
+    <Content Include="fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="fonts\font-awesome-5\css\fontawesome-all.min.css" />
+    <Content Include="fonts\font-awesome-5\webfonts\fa-brands-400.svg" />
+    <Content Include="fonts\font-awesome-5\webfonts\fa-regular-400.svg" />
+    <Content Include="fonts\font-awesome-5\webfonts\fa-solid-900.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\montserrat\OFL.txt" />
+    <Content Include="fonts\poppins\poppins-v5-latin-100.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-100italic.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-200.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-200italic.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-300.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-300italic.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-500.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-500italic.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-600.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-600italic.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-700.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-700italic.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-800.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-800italic.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-900.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-900italic.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-italic.svg" />
+    <Content Include="fonts\poppins\poppins-v5-latin-regular.svg" />
+    <Content Include="Fund_request.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="img\121.png" />
+    <Content Include="img\about1.jpg" />
+    <Content Include="img\about2.jpg" />
+    <Content Include="img\aeps1.png" />
+    <Content Include="img\author.jpg" />
+    <Content Include="img\background1.jpg" />
+    <Content Include="img\background2.jpg" />
+    <Content Include="img\background3.jpg" />
+    <Content Include="img\bg-title-01.jpg" />
+    <Content Include="img\bg-title-02.jpg" />
+    <Content Include="img\blog-post.jpg" />
+    <Content Include="img\blog1.jpg" />
+    <Content Include="img\blog2.jpg" />
+    <Content Include="img\blog3.jpg" />
+    <Content Include="img\icon\avatar-01.jpg" />
+    <Content Include="img\icon\avatar-02.jpg" />
+    <Content Include="img\icon\avatar-03.jpg" />
+    <Content Include="img\icon\avatar-04.jpg" />
+    <Content Include="img\icon\avatar-05.jpg" />
+    <Content Include="img\icon\avatar-06.jpg" />
+    <Content Include="img\icon\avatar-big-01.jpg" />
+    <Content Include="img\icon\logo-blue.png" />
+    <Content Include="img\icon\logo-mini.png" />
+    <Content Include="img\icon\logo-white.png" />
+    <Content Include="img\icon\logo.png" />
+    <Content Include="img\icon\Untitled-1.jpg" />
+    <Content Include="img\logo-alt.png" />
+    <Content Include="img\nsdl1.png" />
+    <Content Include="img\perso1.jpg" />
+    <Content Include="img\perso2.jpg" />
+    <Content Include="img\post1.jpg" />
+    <Content Include="img\post2.jpg" />
+    <Content Include="img\post3.jpg" />
+    <Content Include="img\team1.jpg" />
+    <Content Include="img\team2.jpg" />
+    <Content Include="img\team3.jpg" />
+    <Content Include="img\uti.png" />
+    <Content Include="img\work1.jpg" />
+    <Content Include="img\work2.jpg" />
+    <Content Include="img\work3.jpg" />
+    <Content Include="img\work4.jpg" />
+    <Content Include="img\work5.jpg" />
+    <Content Include="img\work6.jpg" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\global.js" />
+    <Content Include="js\jquery.magnific-popup.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\login_main.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\main1.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="Load_wallet.aspx" />
+    <Content Include="main.js" />
+    <Content Include="retailer.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="vendor\animate\animate.css" />
+    <Content Include="vendor\animsition\animsition.min.css" />
+    <Content Include="vendor\animsition\animsition.min.js" />
+    <Content Include="vendor\bootstrap-progressbar\bootstrap-progressbar-3.3.4.min.css" />
+    <Content Include="vendor\bootstrap-progressbar\bootstrap-progressbar.min.js" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vendor\bootstrap\js\popper.js" />
+    <Content Include="vendor\bootstrap\js\popper.min.js" />
+    <Content Include="vendor\bootstrap\js\tooltip.js" />
+    <Content Include="vendor\chartjs\Chart.bundle.min.js" />
+    <Content Include="vendor\circle-progress\circle-progress.js" />
+    <Content Include="vendor\circle-progress\circle-progress.min.js" />
+    <Content Include="vendor\counter-up\jquery.counterup.min.js" />
+    <Content Include="vendor\counter-up\jquery.waypoints.min.js" />
+    <Content Include="vendor\counter-up\waypoints.min.js" />
+    <Content Include="vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="vendor\mdi-font\css\material-design-iconic-font.css" />
+    <Content Include="vendor\mdi-font\css\material-design-iconic-font.min.css" />
+    <Content Include="vendor\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="vendor\perfect-scrollbar\perfect-scrollbar.js" />
+    <Content Include="vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="vendor\select2\select2.css" />
+    <Content Include="vendor\select2\select2.js" />
+    <Content Include="vendor\select2\select2.min.css" />
+    <Content Include="vendor\select2\select2.min.js" />
+    <Content Include="vendor\slick\ajax-loader.gif" />
+    <Content Include="vendor\slick\fonts\slick.svg" />
+    <Content Include="vendor\slick\slick-theme.css" />
+    <Content Include="vendor\slick\slick.css" />
+    <Content Include="vendor\slick\slick.js" />
+    <Content Include="vendor\slick\slick.min.js" />
+    <Content Include="vendor\tilt\tilt.jquery.min.js" />
+    <Content Include="vendor\vector-map\jquery.vmap.brazil.js" />
+    <Content Include="vendor\vector-map\jquery.vmap.europe.js" />
+    <Content Include="vendor\vector-map\jquery.vmap.france.js" />
+    <Content Include="vendor\vector-map\jquery.vmap.germany.js" />
+    <Content Include="vendor\vector-map\jquery.vmap.js" />
+    <Content Include="vendor\vector-map\jquery.vmap.min.js" />
+    <Content Include="vendor\vector-map\jquery.vmap.russia.js" />
+    <Content Include="vendor\vector-map\jquery.vmap.sampledata.js" />
+    <Content Include="vendor\vector-map\jquery.vmap.usa.js" />
+    <Content Include="vendor\vector-map\jquery.vmap.world.js" />
+    <Content Include="vendor\vector-map\jqvmap.min.css" />
+    <Content Include="vendor\wow\animate.css" />
+    <Content Include="vendor\wow\wow.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="dashboard.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="WebForm3.aspx" />
+    <Content Include="WebForm4.aspx" />
+    <Content Include="WebForm5.aspx" />
+    <Content Include="WebForm6.aspx" />
+    <Content Include="WebForm7.aspx" />
+    <Content Include="WebForm8.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agent_Login1.aspx.cs">
+      <DependentUpon>Agent_Login1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent_Login1.aspx.designer.cs">
+      <DependentUpon>Agent_Login1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fund_request.aspx.cs">
+      <DependentUpon>Fund_request.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fund_request.aspx.designer.cs">
+      <DependentUpon>Fund_request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Load_wallet.aspx.cs">
+      <DependentUpon>Load_wallet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Load_wallet.aspx.designer.cs">
+      <DependentUpon>Load_wallet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="retailer.aspx.cs">
+      <DependentUpon>retailer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="retailer.aspx.designer.cs">
+      <DependentUpon>retailer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm4.aspx.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm4.aspx.designer.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm5.aspx.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm5.aspx.designer.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm6.aspx.cs">
+      <DependentUpon>WebForm6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm6.aspx.designer.cs">
+      <DependentUpon>WebForm6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm7.aspx.cs">
+      <DependentUpon>WebForm7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm7.aspx.designer.cs">
+      <DependentUpon>WebForm7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm8.aspx.cs">
+      <DependentUpon>WebForm8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm8.aspx.designer.cs">
+      <DependentUpon>WebForm8.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <None Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <None Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <None Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <None Include="fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <None Include="fonts\font-awesome-4.7.0\less\animated.less" />
+    <None Include="fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <None Include="fonts\font-awesome-4.7.0\less\core.less" />
+    <None Include="fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <None Include="fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <None Include="fonts\font-awesome-4.7.0\less\icons.less" />
+    <None Include="fonts\font-awesome-4.7.0\less\larger.less" />
+    <None Include="fonts\font-awesome-4.7.0\less\list.less" />
+    <None Include="fonts\font-awesome-4.7.0\less\mixins.less" />
+    <None Include="fonts\font-awesome-4.7.0\less\path.less" />
+    <None Include="fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <None Include="fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <None Include="fonts\font-awesome-4.7.0\less\stacked.less" />
+    <None Include="fonts\font-awesome-4.7.0\less\variables.less" />
+    <None Include="fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <None Include="fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <None Include="fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <None Include="fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <None Include="fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <None Include="fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <None Include="fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <None Include="fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <None Include="fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <None Include="fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <None Include="fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <None Include="fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <None Include="fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <None Include="fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <None Include="fonts\font-awesome-5\webfonts\fa-brands-400.eot" />
+    <None Include="fonts\font-awesome-5\webfonts\fa-brands-400.ttf" />
+    <None Include="fonts\font-awesome-5\webfonts\fa-brands-400.woff" />
+    <None Include="fonts\font-awesome-5\webfonts\fa-brands-400.woff2" />
+    <None Include="fonts\font-awesome-5\webfonts\fa-regular-400.eot" />
+    <None Include="fonts\font-awesome-5\webfonts\fa-regular-400.ttf" />
+    <None Include="fonts\font-awesome-5\webfonts\fa-regular-400.woff" />
+    <None Include="fonts\font-awesome-5\webfonts\fa-regular-400.woff2" />
+    <None Include="fonts\font-awesome-5\webfonts\fa-solid-900.eot" />
+    <None Include="fonts\font-awesome-5\webfonts\fa-solid-900.ttf" />
+    <None Include="fonts\font-awesome-5\webfonts\fa-solid-900.woff" />
+    <None Include="fonts\font-awesome-5\webfonts\fa-solid-900.woff2" />
+    <None Include="fonts\fontawesome-webfont.eot" />
+    <None Include="fonts\fontawesome-webfont.ttf" />
+    <None Include="fonts\fontawesome-webfont.woff" />
+    <None Include="fonts\fontawesome-webfont.woff2" />
+    <None Include="fonts\FontAwesome.otf" />
+    <None Include="fonts\montserrat\Montserrat-Black.ttf" />
+    <None Include="fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <None Include="fonts\montserrat\Montserrat-Bold.ttf" />
+    <None Include="fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <None Include="fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <None Include="fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <None Include="fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <None Include="fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <None Include="fonts\montserrat\Montserrat-Italic.ttf" />
+    <None Include="fonts\montserrat\Montserrat-Light.ttf" />
+    <None Include="fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <None Include="fonts\montserrat\Montserrat-Medium.ttf" />
+    <None Include="fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <None Include="fonts\montserrat\Montserrat-Regular.ttf" />
+    <None Include="fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <None Include="fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <None Include="fonts\montserrat\Montserrat-Thin.ttf" />
+    <None Include="fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <None Include="fonts\poppins\Poppins-Black.ttf" />
+    <None Include="fonts\poppins\Poppins-BlackItalic.ttf" />
+    <None Include="fonts\poppins\Poppins-Bold.ttf" />
+    <None Include="fonts\poppins\Poppins-BoldItalic.ttf" />
+    <None Include="fonts\poppins\Poppins-ExtraBold.ttf" />
+    <None Include="fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <None Include="fonts\poppins\Poppins-ExtraLight.ttf" />
+    <None Include="fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <None Include="fonts\poppins\Poppins-Italic.ttf" />
+    <None Include="fonts\poppins\Poppins-Light.ttf" />
+    <None Include="fonts\poppins\Poppins-LightItalic.ttf" />
+    <None Include="fonts\poppins\Poppins-Medium.ttf" />
+    <None Include="fonts\poppins\Poppins-MediumItalic.ttf" />
+    <None Include="fonts\poppins\Poppins-Regular.ttf" />
+    <None Include="fonts\poppins\Poppins-SemiBold.ttf" />
+    <None Include="fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <None Include="fonts\poppins\Poppins-Thin.ttf" />
+    <None Include="fonts\poppins\Poppins-ThinItalic.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-100.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-100.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-100.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-100.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-100italic.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-100italic.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-100italic.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-100italic.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-200.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-200.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-200.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-200.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-200italic.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-200italic.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-200italic.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-200italic.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-300.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-300.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-300.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-300.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-300italic.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-300italic.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-300italic.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-300italic.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-500.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-500.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-500.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-500.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-500italic.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-500italic.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-500italic.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-500italic.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-600.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-600.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-600.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-600.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-600italic.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-600italic.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-600italic.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-600italic.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-700.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-700.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-700.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-700.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-700italic.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-700italic.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-700italic.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-700italic.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-800.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-800.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-800.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-800.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-800italic.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-800italic.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-800italic.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-800italic.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-900.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-900.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-900.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-900.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-900italic.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-900italic.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-900italic.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-900italic.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-italic.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-italic.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-italic.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-italic.woff2" />
+    <None Include="fonts\poppins\poppins-v5-latin-regular.eot" />
+    <None Include="fonts\poppins\poppins-v5-latin-regular.ttf" />
+    <None Include="fonts\poppins\poppins-v5-latin-regular.woff" />
+    <None Include="fonts\poppins\poppins-v5-latin-regular.woff2" />
+    <Content Include="Site2.Master" />
+    <None Include="vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <None Include="vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <None Include="vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <None Include="vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <None Include="vendor\bootstrap\css\bootstrap.css.map" />
+    <None Include="vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="vendor\mdi-font\fonts\Material-Design-Iconic-Font.eot" />
+    <None Include="vendor\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <None Include="vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
+    <None Include="vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <None Include="vendor\slick\config.rb" />
+    <None Include="vendor\slick\fonts\slick.eot" />
+    <None Include="vendor\slick\fonts\slick.ttf" />
+    <None Include="vendor\slick\fonts\slick.woff" />
+    <None Include="vendor\slick\slick-theme.less" />
+    <None Include="vendor\slick\slick-theme.scss" />
+    <None Include="vendor\slick\slick.less" />
+    <None Include="vendor\slick\slick.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>31013</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
