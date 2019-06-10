@@ -250,38 +250,27 @@
                                     <asp:Panel ID="Panel4" runat="server"></asp:Panel>
 
 
-                                       <%-- <div class="account-dropdown__item">
-                                            <a href="#">
-                                                <i class="zmdi zmdi-account"></i>Account</a>
+                                       <div class="account-dropdown__item">
+                                           <asp:Label ID="Label3" runat="server" Text="Name"></asp:Label>
                                         </div>
                                         <div class="account-dropdown__item">
-                                            <a href="#">
-                                                <i class="zmdi zmdi-settings"></i>Setting</a>
+                                           <asp:Label ID="Label4" runat="server" Text="Contact N0."></asp:Label>
                                         </div>
                                         <div class="account-dropdown__item">
-                                            <a href="#">
-                                                <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                           <asp:Label ID="Label6" runat="server" Text="Email"></asp:Label>
                                         </div>
                                     </div>
+                                    <h3> Bank Details</h3>
                                     <div class="account-dropdown__body">
                                         <div class="account-dropdown__item">
-                                            <a href="#">
-                                                <i class="zmdi zmdi-globe"></i>Language</a>
+                                           <asp:Label ID="Label7" runat="server" Text="IFSC CODE"></asp:Label>
                                         </div>
                                         <div class="account-dropdown__item">
-                                            <a href="#">
-                                                <i class="zmdi zmdi-pin"></i>Location</a>
+                                           <asp:Label ID="Label8" runat="server" Text="Account No"></asp:Label>
                                         </div>
                                         <div class="account-dropdown__item">
-                                            <a href="#">
-                                                <i class="zmdi zmdi-email"></i>Email</a>
+                                            <asp:Label ID="Label9" runat="server" Text="Payment Link"></asp:Label>
                                         </div>
-                                        <div class="account-dropdown__item">
-                                            <a href="#">
-                                                <i class="zmdi zmdi-notifications"></i>Notifications</a>
-                                        </div>
-                                    </div>
-                                </div>--%>
                             </div>
                         </div>
                     </div>
