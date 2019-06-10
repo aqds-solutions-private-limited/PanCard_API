@@ -112,30 +112,27 @@
        
        
          
+             
              <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" 
         Width="824px" 
          onselectedindexchanged="GridView1_SelectedIndexChanged" Height="36px" >
     <Columns>
           <asp:TemplateField HeaderText="Agent Id" Visible="true">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox> 
+                <asp:Label ID="Label1" runat="server" Text='<%# Eval("id") %>'></asp:Label>
             </ItemTemplate>
             </asp:TemplateField>
         <asp:TemplateField HeaderText="Personal Details" Visible="true">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+               <asp:Label ID="Label1" runat="server" Text='<%# Eval("pd") %>'></asp:Label>
              </ItemTemplate>
             </asp:TemplateField>
-             <asp:TemplateField HeaderText="Parent Details" Visible="true">
+             
+             <asp:TemplateField HeaderText="Parent Details" Visible="true" HeaderStyle-CssClass="pose3">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>  
-            </ItemTemplate>
+            <asp:Label ID="Label1" runat="server" Text='<%# Eval("map_under") %>'></asp:Label>
+             </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField HeaderText="Company Details">
-             <ItemTemplate>
-          <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-          </ItemTemplate>
-          </asp:TemplateField>
          
 
           <asp:TemplateField HeaderText="Wallet Balance" Visible="true">
