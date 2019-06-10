@@ -30,9 +30,17 @@ namespace PenCardApi_Solutions
                // dt.Rows.Add(1, "Twinkle", "Works as a scientist in USA.");
                // dt.Rows.Add(2, "Priyanka", "ASP.Net programmer and consultant in India.");
             }
+              if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
+
             con.Open();
-            string get = "select id as id, [name]+' |'+[city]+' |'+[member_type] as pd from add_member";
-            cmd = new SqlCommand(get,con);
+
+            cmd = new SqlCommand("ftch_byMemberType", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@member_type", "Distributor");
+
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
             ad.Fill(dt);
             con.Close();
