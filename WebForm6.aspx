@@ -123,6 +123,13 @@
             <asp:Label ID="Label1" runat="server" Text='<%# Eval("pd") %>'></asp:Label>
              </ItemTemplate>
             </asp:TemplateField>
+	    
+	    
+             <asp:TemplateField HeaderText="Parent Details" Visible="true" HeaderStyle-CssClass="pose3">
+            <ItemTemplate>
+            <asp:Label ID="Label1" runat="server" Text='<%# Eval("map_under") %>'></asp:Label>
+             </ItemTemplate>
+            </asp:TemplateField>
             
           <asp:TemplateField HeaderText="Wallet Balance" Visible="true" HeaderStyle-CssClass="pose3">
             <ItemTemplate>
