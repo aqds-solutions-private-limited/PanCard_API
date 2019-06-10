@@ -147,11 +147,14 @@
             </asp:TemplateField>
          
 
-           <asp:TemplateField HeaderText="Action"  Visible="true" HeaderStyle-CssClass="align_center" >
+            <asp:TemplateField HeaderText="Action"  Visible="true" HeaderStyle-CssClass="align_center" >
             <ItemTemplate>
-           &nbsp;  <asp:LinkButton ID="LinkButton1" runat="server"><i class="fa fa-plus" style="color:Orange"></i></asp:LinkButton>
-           &nbsp; &nbsp;  <asp:LinkButton ID="LinkButton2" runat="server"><i class="fa fa-minus" style="color:Orange"></i></asp:LinkButton>
-           &nbsp; &nbsp;   <asp:LinkButton ID="LinkButton3" runat="server"><i class="fa fa-inr " style="color:Blue"></i></asp:LinkButton>
+            &nbsp; 
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%#"add_balance.aspx?Agent id="+DataBinder.Eval(Container.DataItem,"Agent id") %>'><i class="fa fa-plus" style="color:Orange"></i></asp:HyperLink>
+           &nbsp; &nbsp;  <asp:HyperLink ID="HyperLink1" runat="server"  NavigateUrl='<%#"revert.aspx?Agent id="+DataBinder.Eval(Container.DataItem,"Agent id") %>'><i class="fa fa-minus" style="color:Orange"></i></asp:HyperLink>
+             &nbsp; &nbsp;  
+              <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl='<%#"rupee.aspx?Agent id="+DataBinder.Eval(Container.DataItem,"Agent id") %>'><i class="fa fa-inr " style="color:Blue"></i></asp:HyperLink>
+        
              </ItemTemplate>
             
             </asp:TemplateField>
