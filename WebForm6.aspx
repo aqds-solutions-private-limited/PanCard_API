@@ -138,12 +138,19 @@
             </asp:TemplateField>
 
             
-          <asp:TemplateField HeaderText="Action" Visible="true" HeaderStyle-CssClass="pose3">
+           <asp:TemplateField HeaderText="Action" Visible="true" ControlStyle-Width="70" HeaderStyle-CssClass="align_center" >
             <ItemTemplate>
-       
+                <asp:Panel ID="Panel1" runat="server" CssClass="pos3">
+              <h5> payment menu</h5>
+                    <asp:LinkButton ID="LinkButton3" runat="server"><i class="fa fa-rupee">Fund Transfer/Return</i></asp:LinkButton>
+                <h5>id stock</h5>
+                    <asp:LinkButton ID="LinkButton4" runat="server"><i class="fa fa-user-plus ">Add Id Stock</i></asp:LinkButton>
+                    <h5>charges/commission</h5>
+                    <asp:LinkButton ID="LinkButton5" runat="server"><i class="fa fa-rupee">Pancard</i></asp:LinkButton>
+                </asp:Panel>
+        
              </ItemTemplate>
             </asp:TemplateField>
-         
          
     </Columns>
 </asp:GridView>
