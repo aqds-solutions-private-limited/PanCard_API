@@ -147,7 +147,7 @@
             
            <asp:TemplateField HeaderText="Action" Visible="true" ControlStyle-Width="70" HeaderStyle-CssClass="align_center" >
             <ItemTemplate>
-                <asp:Panel ID="Panel1" runat="server" CssClass="pos3">
+                <asp:Panel ID="Action_dist" runat="server" CssClass="pos3">
               <h5> payment menu</h5>
                     <asp:LinkButton ID="LinkButton3" runat="server"><i class="fa fa-rupee">Fund Transfer/Return</i></asp:LinkButton>
                 <h5>id stock</h5>
