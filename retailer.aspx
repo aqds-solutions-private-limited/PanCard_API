@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="retailer.aspx.cs" Inherits="PenCardApi_Solutions.retailer" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="retailer.aspx.cs" Inherits="PenCardApi_Solutions.retailer" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <style type="text/css">
 .pos
@@ -17,6 +17,9 @@
 {
     position:absolute;
     top:150px;
+}
+
+
 
     
 </style>
@@ -62,9 +65,9 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Retailer List
                     <asp:LinkButton ID="LinkButton2" runat="server" CssClass="pull-right"><i class="fa fa-filter"></i> Filter</asp:LinkButton>
-               <!-- <a class="pull-right mybtn  waves-effect m-l-15" href="#" id="export"> <i class="fa fa-download"></i> Export</a> -->
-                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="pull-right name"><i class="fa fa-plus"></i> New Request</asp:LinkButton>
-               <!-- <a class="pull-right mybtn waves-effect" href="WebForm3.aspx" target="_blank"><i class="fa fa-plus"></i> Add New</a></h3> -->
+                 <asp:Button ID="Button2" runat="server" CssClass="form-control pull-right" Text="New Request" style=" width:130px; position:absolute; left:800px; top:3px; background-color:inherit; color:White; border:inherit; font:Times New Roman; font-size:17px;"/> 
+                  
+               
 
          </div>
  </div>
@@ -112,7 +115,6 @@
        
        
          
-             
              <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" 
         Width="824px" 
          onselectedindexchanged="GridView1_SelectedIndexChanged" Height="36px" >
@@ -133,7 +135,7 @@
             <asp:Label ID="Label1" runat="server" Text='<%# Eval("map_under") %>'></asp:Label>
              </ItemTemplate>
             </asp:TemplateField>
-         
+                
 
           <asp:TemplateField HeaderText="Wallet Balance" Visible="true">
             <ItemTemplate>
