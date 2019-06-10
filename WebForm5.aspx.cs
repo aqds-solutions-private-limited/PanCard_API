@@ -11,80 +11,79 @@ using System.Drawing;
 namespace PenCardApi_Solutions
 {
     public partial class WebForm5 : System.Web.UI.Page
+{     string pass ;
+    SqlConnection con = new SqlConnection("Data Source=intel-PC\\SQLEXPRESS;Initial Catalog=API_DB;Integrated Security=True");
+    SqlCommand cmd = new SqlCommand();
+    DataTable dt = new DataTable();
+    DataTable dt1 = new DataTable();
+    protected void Page_Load(object sender, EventArgs e)
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-4NFLJ61\\SQLEXPRESS;Initial Catalog=API_DB;Integrated Security=True");
-        SqlCommand cmd;
-        DataTable dt = new DataTable();
-        protected void Page_Load(object sender, EventArgs e)
+
+        string name = Session["username"].ToString();
+
+        dt.Clear();
+        dt.Rows.Clear();
+        if (con.State == ConnectionState.Open)
         {
-            string name=  Session["username"].ToString();
-            dt.Clear();
-            dt.Rows.Clear();
-            if (con.State == ConnectionState.Open)
-            {
-                con.Close();
-            }
-            string get = "select * from login_table ";
+            con.Close();
         }
+        con.Open();
+        string get = "select * from login_table where username = '" + Session["username"].ToString() + "'";
+        SqlCommand cmd = new SqlCommand(get, con);
+        SqlDataAdapter ad1 = new SqlDataAdapter(cmd);
+        ad1.Fill(dt);
+        con.Close();
+        if (dt.Rows.Count > 0)
+        {
+            pass = dt.Rows[0]["password"].ToString();
+        }
+        else
+        {
+            Response.Write("not found");
+        }
+
+
+    }
+
+
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+    //    if (textbox2.Text == textbox3.Text)
+    //    {
+    //        Label4.ForeColor = System.Drawing.Color.Green;
+    //        Label4.Text = "Password Matched!";
+
+    //    }
+    //    else
+    //    {
+    //        Label4.ForeColor = System.Drawing.Color.Red;
+    //        Label4.Text = "Password does not match.. Please Check Your Password!!";
+    //    }
+
 
         
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            //if(textbox2.Text == textbox3.Text)
-            //{
-            //    Label4.ForeColor=System.Drawing.Color.Green;
-            //    Label4.Text = "Password Matched!";
-              
-            //}
-            //else
-            //{
-            //    Label4.ForeColor = System.Drawing.Color.Red;
-            //    Label4.Text= "Password does not match.. Please Check Your Password!!";
-            //}
 
-            dt.Clear();
-            dt.Rows.Clear();
-            if (con.State == ConnectionState.Open)
-            {
-                con.Close();
-            }
-            string get = "select * from login_table where username='" + Session["username"].ToString() + "' ";
-            SqlDataAdapter ad = new SqlDataAdapter(cmd);
-            ad.Fill(dt);
+         if(pass == textbox1.Text)
+         {
+             
+        
+         string update1 = "update login_table set password='"+textbox3.Text+"'  where username = '" + Session["username"].ToString() + "'";
+            con.Open();
+            SqlCommand cmd1 = new SqlCommand(update1, con);
+            cmd1.ExecuteNonQuery();
             con.Close();
-
-            if (dt.Rows.Count > 0)
-            {
-                Session["username"] = dt.Rows[0]["username"].ToString();
-                if (dt.Rows[0]["password"] == textbox1.Text)
-                {
-
-
-                    DataTable dt2 = new DataTable();
-                    string up = "Update login_table set password = '" + textbox2.Text + "' where username='" + Session["username"].ToString() + "'";
-                    if (con.State == ConnectionState.Open)
-                    {
-                        con.Close();
-                    }
-                    con.Open();
-                    SqlCommand cmd1 = new SqlCommand(up, con);
-                    cmd1.ExecuteNonQuery();
-                    con.Close();
-                    this.ClientScript.RegisterStartupScript(this.GetType(), "SweetAlert", "swal('Hurray!', 'You are registered successfully!', 'success');", true);
-                    Response.Redirect("WebForm2.aspx");
-
-                }
-                else
-                {
-                    Response.Redirect("WebForm2.aspx");
-                }
-            }
-            else
-            {
-
-                //Response.Redirect("Agent_Login1.aspx");
-                //Label1.Text = "Invalid Username And Password";
-            }
+         }
+        else
+         {  
+           //  this.ClientScript.RegisterStartupScript(this.GetType, "Sweetalert", "swal('Opps!', 'Password doesnot match!', 'error');", true);
         }
+
     }
+   
+   
+   
+}
+
+
 }
