@@ -82,13 +82,12 @@
                   <div class="page-wrapper bg-sky p-t-40 p-b-100 font-robo">  
        
        
-         
-             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false"
-        Width="1010px" 
+          <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false"
+        Width="950px" CssClass="left-margin" 
          onselectedindexchanged="GridView1_SelectedIndexChanged" Height="36px"  HorizontalAlign="Center">
          
     <Columns>
-         <asp:TemplateField HeaderText="sr. no"  ControlStyle-Width="25" HeaderStyle-CssClass="align_center">
+          <asp:TemplateField HeaderText="sr. no"  ControlStyle-Width="25" HeaderStyle-CssClass="align_center">
             <ItemTemplate>
             <%#Container.DataItemIndex+1 %>
                <!-- <asp:TextBox ID="TextBox1" runat="server" Text='<%# Eval("Mobile") %>'></asp:TextBox> -->
@@ -96,17 +95,17 @@
             </asp:TemplateField>
         <asp:TemplateField HeaderText="Agent id" ControlStyle-Width="70" HeaderStyle-CssClass="align_center">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox2" runat="server" Text='<%# Eval("Agent id") %>'></asp:TextBox>
+                <asp:TextBox ID="TextBox2" runat="server" Text='<%# Eval("Agent id") %>' Enabled="false"></asp:TextBox>
              </ItemTemplate>
             </asp:TemplateField>
              <asp:TemplateField HeaderText="Agent Name" ControlStyle-Width="70" HeaderStyle-CssClass="align_center">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox3" runat="server" Text='<%# Eval("Agent Name") %>'></asp:TextBox>  
+                <asp:TextBox ID="TextBox3" runat="server" Text='<%# Eval("Agent Name") %>' Enabled="false"></asp:TextBox>  
             </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Mobile" ControlStyle-Width="70" HeaderStyle-CssClass="align_center" >
              <ItemTemplate>
-          <asp:TextBox ID="TextBox4" runat="server" Text='<%# Eval("Mobile") %>'></asp:TextBox>
+          <asp:TextBox ID="TextBox4" runat="server" Text='<%# Eval("Mobile") %>' Enabled="false"></asp:TextBox>
           </ItemTemplate>
          
           </asp:TemplateField>
@@ -114,37 +113,37 @@
 
           <asp:TemplateField HeaderText="State" ControlStyle-Width="70" Visible="true" HeaderStyle-CssClass="align_center">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox5" runat="server" Text='<%# Eval("state") %>'>></asp:TextBox>
+                <asp:TextBox ID="TextBox5" runat="server" Text='<%# Eval("state") %>' Enabled="false"></asp:TextBox>
              </ItemTemplate>
             </asp:TemplateField>
          
           <asp:TemplateField HeaderText="Join Date" ControlStyle-Width="70" Visible="true" HeaderStyle-CssClass="align_center">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox6" runat="server" Text='<%# Eval("Mobile") %>'>></asp:TextBox>
+                <asp:TextBox ID="TextBox6" runat="server" Text='<%# Eval("Mobile") %>' Enabled="false"></asp:TextBox>
              </ItemTemplate>
             </asp:TemplateField>
 
              <asp:TemplateField HeaderText="Email Id" ControlStyle-Width="70" Visible="true" HeaderStyle-CssClass="align_center">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox7" runat="server" Text='<%# Eval("Email Id") %>'>></asp:TextBox>
+                <asp:TextBox ID="TextBox7" runat="server" Text='<%# Eval("Email Id") %>' Enabled="false"></asp:TextBox>
              </ItemTemplate>
             </asp:TemplateField>
          
          <asp:TemplateField HeaderText="Fos" ControlStyle-Width="70 " HeaderStyle-CssClass="align_center">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox8"  runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox8"  runat="server" Enabled="false"></asp:TextBox>
              </ItemTemplate>
             </asp:TemplateField>
          
          <asp:TemplateField HeaderText="Balance" ControlStyle-Width="70" Visible="true" HeaderStyle-CssClass="align_center">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox9"  runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox9"  runat="server" Enabled="false"></asp:TextBox>
              </ItemTemplate>
             </asp:TemplateField>
          
            <asp:TemplateField HeaderText="Login" ControlStyle-Width="70" Visible="true" HeaderStyle-CssClass="align_center">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox10" runat="server" Enabled="false"></asp:TextBox>
              </ItemTemplate>
             </asp:TemplateField>
           
