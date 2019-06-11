@@ -1,12 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="WebApplication1.WebForm1" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="WebApplication1.WebForm1" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <title></title>
@@ -25,7 +25,7 @@
 	<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
 
 	<!-- Font Awesome Icon -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
 
 	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
@@ -112,7 +112,7 @@
 					<li><a href="#about">About US</a></li>
 				      
                     <li><a href="#service">Services</a>	</li>	
-                    <li> <a href = "#work_flow">WorkFlow</a></li>				
+                    <li> <a href = "#partner">Partners</a></li>				
                     <li> <a href = "Agent_Login1.aspx"> Agent Login</a></li>			
 					
 					<li><a href="#contact">Contact</a></li>
@@ -128,7 +128,7 @@
 			<div class="container">
 				<div class="row">
 
-					<!-- home content -->
+					<!-- home content 
 					<div class="col-md-10 col-md-offset-1">
 						<div class="home-content">
 							<h1 class="white-text">We Are Creative Agency</h1>
@@ -224,7 +224,7 @@
 				<div class="col-md-4 col-sm-6">
 					<div class="service">
 						<i class="fa fa-money"></i>
-						<h3>Online Money Transfer</h3>
+						<h3> Money Transfer</h3>
 						<p>We offer Money Transfer Services .Can transfer money from one bank to another bank without any trouble.</p>
 					</div>
 				</div>
@@ -234,7 +234,7 @@
 				<div class="col-md-4 col-sm-6">
 					<div class="service">
 						<i class="fa fa-rocket"></i>
-						<h3>Online Bill Payment</h3>
+						<h3> Bill Payments</h3>
 						<p>We provide All types of Bill Payments through one platform. You can pay bills hassle-free and quick.</p>
 					</div>
 				</div>
@@ -290,64 +290,9 @@
 	</div>
 	<!-- /Service -->
 
-
-	<!-- Why Choose Us 
-	<div id="features" class="section md-padding bg-grey">
-
-		<!-- Container 
-		<div class="container">
-         
-			<!-- Row 
-			<div class="row">
-
-				<!-- why choose us content 
-				<div class="col-md-6">
-					<div class="section-header">
-						<h2 class="title">Why Choose Us</h2>
-					</div>
-					<p>Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris. Ultrices sagittis orci a scelerisque purus.</p>
-					<div class="feature">
-						<i class="fa fa-check"></i>
-						<p>Quis varius quam quisque id diam vel quam elementum.</p>
-					</div>
-					<div class="feature">
-						<i class="fa fa-check"></i>
-						<p>Mauris augue neque gravida in fermentum.</p>
-					</div>
-					<div class="feature">
-						<i class="fa fa-check"></i>
-						<p>Orci phasellus egestas tellus rutrum.</p>
-					</div>
-					<div class="feature">
-						<i class="fa fa-check"></i>
-						<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium.</p>
-					</div>
-				</div>
-				<!-- /why choose us content -->
-
-				<!-- About slider 
-				<div class="col-md-6">
-					<div id="about-slider" class="owl-carousel owl-theme">
-						<img class="img-responsive" src="./img/about1.jpg" alt="">
-						<img class="img-responsive" src="./img/about2.jpg" alt="">
-						<img class="img-responsive" src="./img/about1.jpg" alt="">
-						<img class="img-responsive" src="./img/about2.jpg" alt="">
-					</div>
-				</div>
-				<!-- /About slider 
-
-			</div>
-			<!-- /Row 
-
-		</div>
-		<!-- /Container 
-
-	</div>
-	<!-- /Why Choose Us -->
-
-
-	<!-- Work Flow -->
-	<div id="work_flow" class="section md-padding">
+    
+	<!-- Partner Service -->
+	<div id="partner" class="section md-padding">
 
 		<!-- Container -->
 		<div class="container">
@@ -357,112 +302,79 @@
 
 				<!-- Section header -->
 				<div class="section-header text-center">
-					<h2 class="title">Work Flow</h2>
+					<h2 class="title">What our Partners offer</h2>
 				</div>
 				<!-- /Section header -->
 
-				<!-- workflow -->
-				<div class="col-sm-4">
-					<div class="pricing">
-						<div class="price-head">
-							<span class="price-title" style= "font-size:20px">Master Distributer  </span>
-							<div class="price">
-								<h3><span class="duration"><i class = "fa fa-user-circle-o" style="font-size:110px"></i></span></h3>
-							</div>
-						</div>
-			        	<ul class="price-content">
-						
-                            <li>
-								<p>Automatic Refund</p>
-							</li>
-                            <li>
-								<p>High Margin</p>
-							</li>
-                            <li>
-								<p>24/7 support</p>
-							</li>
-							<li>
-								<p>24/7 Billing</p>
-							</li>
-						</ul> 
-						<div class="price-btn">
-							<button class="outline-btn">Read More</button>
-						</div>
+				<!-- service -->
+				<div class="col-md-4 col-sm-6">
+					<div class="service">
+						<i class="fa fa-comment"></i>
+						<h3>Bulk SMS</h3>
+						<p>Services of sending sms in bulk at affordable prices. Manage, send and receive your text messages from anywhere, at any time.</p>
 					</div>
 				</div>
-				<!-- /pricing -->
+				<!-- /service -->
 
-				<!-- pricing -->
-				<div class="col-sm-4">
-					<div class="pricing">
-						<div class="price-head">
-							<span class="price-title" style= "font-size:20px">Distributer </span>
-							<div class="price">
-								<h3><span class="duration"><i class= "fa fa-user-circle-o" style="font-size:110px"></i></span></h3>
-							</div>
-						</div>
-					    <ul class="price-content">
-						
-                            <li>
-								<p>Automatic Refund</p>
-							</li>
-                            <li>
-								<p>High Margin</p>
-							</li>
-                            <li>
-								<p>24/7 support</p>
-							</li>
-							<li>
-								<p>24/7 Billing</p>
-							</li>
-						</ul> 
-						<div class="price-btn">
-							<button class="outline-btn">Read More</button>
-						</div>
+				<!-- service -->
+				<div class="col-md-4 col-sm-6">
+					<div class="service">
+						<i class="fa fa-window-maximize"></i>
+						<h3>Website Development</h3>
+						<p>Main objective is to develop a website that is capable of meeting business requirement using the modern technologies.</p>
 					</div>
 				</div>
-				<!-- /pricing -->
+				<!-- /service -->
+               
+				<!-- service -->
+				<div class="col-md-4 col-sm-6">
+					<div class="service">
+						<i class="fa fa-id-card"></i>
+						<h3>Domain Registration</h3>
+						<p>Are you thinking about your digital identity, we will reserve for you.<br /> .com, .org, .gov <br />.in, .co.in</p>
+					</div>
+				</div>
+				<!-- /service -->
+                 
+				<!-- service -->
+				<div class="col-md-4 col-sm-6">
+					<div class="service">
+						<i class="fa fa-cloud-upload"></i>
+						<h3>Hosting Services</h3>
+						<p>Get secure hosting to host and manage your business site. We are offering dedicated Hosting, Linux Hosting with MySQL Databases, shared and VPS hosting services. </p>
+					</div>
+				</div>
+				<!-- /service -->
+                 
+				<!-- Partner Service -->
+				<div class="col-md-4 col-sm-6">
+					<div class="service">
+						<i class="fa fa-android"></i> 
+                  
+						<h3>App Development</h3>
+						<p>We are leading application development service provider. We have expertization to develop mobile applications for Windows, iOS and Android platform</p>
+					</div>
+				</div>
+				<!-- /Partner Service -->
 
-				<!-- pricing -->
-				<div class="col-sm-4">
-					<div class="pricing">
-						<div class="price-head">
-							<span class="price-title" style= "font-size:20px">Retailer</span>
-							<div class="price">
-								<h3><span class="duration"> <i class = "fa fa-user-circle-o" style="font-size:110px"></i><span></h3>
-							</div>
-						</div>
-						<ul class="price-content">
-						
-                            <li>
-								<p>Pancard Services</p>
-							</li>
-                            <li>
-								<p>Money Transfer Services</p>
-							</li>
-							<li>
-								<p>Automatic Refund</p>
-							</li>
-							
-                            <li>
-								<p>24/7 Biling</p>
-							</li>
-						</ul> 
-						<div class="price-btn">
-							<button class="outline-btn">Read More</button>
-						</div>
+				<!-- Partner Service -->
+				<div class="col-md-4 col-sm-6">
+					<div class="service">
+				    <i class="fa fa-cloud"></i>
+						<h3>Digital Marketing</h3>
+						<p>Boost your business through Internet - SEO Services(Search Engine Optimization, Google Ads, Google adsense ), SMM Services (Social media optimization).</p>
 					</div>
 				</div>
-				<!-- /pricing -->
+				<!-- /Partner Service -->
 
 			</div>
-			<!-- Row -->
+			<!-- /Row -->
 
 		</div>
 		<!-- /Container -->
 
 	</div>
-	<!-- /workflow -->
+	<!-- /Partner Service -->
 
 
 	<!-- Testimonial -->
@@ -572,10 +484,10 @@
 				<!-- contact form -->
 				<div class="col-md-8 col-md-offset-2">
 					<form id="form1" runat="server" class="contact-form" >
-                        <asp:TextBox runat = "server" ID = "textbox1" CssClass="input" Text="Name"></asp:TextBox>
-						<asp:TextBox runat = "server" ID="textbox2" CssClass = "input" Text="Email"></asp:TextBox>
-                        <asp:TextBox runat = "server" ID="textbox3" CssClass = "input" Text="Subject"></asp:TextBox>
-						<asp:TextBox runat = "server" ID="textbox4" CssClass = "input" TextMode="MultiLine" Text="Body"></asp:TextBox>
+                        <asp:TextBox runat = "server" ID = "textbox1" CssClass="input" placeholder="Name"></asp:TextBox>
+						<asp:TextBox runat = "server" ID="textbox2" CssClass = "input" placeholder="Email"></asp:TextBox>
+                        <asp:TextBox runat = "server" ID="textbox3" CssClass = "input" placeholder="Subject"></asp:TextBox>
+						<asp:TextBox runat = "server" ID="textbox4" CssClass = "input" TextMode="MultiLine" placeholder="Body"></asp:TextBox>
 						<asp:Button runat = "server" ID="button1" CssClass = "main-btn" 
                             Text="Send Message" onclick="button1_Click"/>
                         <asp:label runat="server" ID="label1"></asp:label>
@@ -606,9 +518,9 @@
 
 					<!-- footer logo -->
 					<div class="footer-logo">
-						<a href="Home.aspx"><img src="img/logo.png" alt="logo" style=" height:200px;"></a>
+						<a href="Home.aspx"><img src="img/logo.png" alt="logo" style=" height:200px;"/></a>
                 <br />
-                        <a href="Home.aspx"><img src="img/121.png" alt="logo" style=" width:200px;"></a>
+                        <a href="Home.aspx"><img src="img/121.png" alt="logo" style=" width:200px;"/></a>
 					</div>
                    
 					<!-- /footer logo -->
