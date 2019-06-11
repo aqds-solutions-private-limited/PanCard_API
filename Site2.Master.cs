@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,24 +17,60 @@ namespace PenCardApi_Solutions
 
        string log_id;
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
-          
-            if (Session["username"] != null && Session["username"].ToString() != "")
-            {
-                Label1.Text = Session["username"].ToString();
-                log_id = Session["Agent_id"].ToString();
+       protected void Page_Load(object sender, EventArgs e)
+       {
+           if (!Page.IsPostBack == true)
+           {
+               if (Session["username"] != null && Session["username"].ToString() != "")
+               {
+                   log_id = Session["Agent_id"].ToString();
+                   Label1.Text = Session["username"].ToString();
+                   Lbl_mem.Text = Session["member_type"].ToString();
 
-            }
+                            
+                   /////////Member Panel Visiblity &&   Pancard Menu Visiblity///////////
+                   if (Session["member_type"].ToString() == "Retailer")
+                   {
+                       Pancard_Panel.Visible = true;
+                      
+                       Download_panel.Visible = true;
+                       Member_Panel.Visible = false;
+                       UTI.Visible = false;
+                       //Dash_Panel.Visible = false;
+                       Payment_panel.Visible = false;
+                   }
+                   else
+                   {
+                       Member_Panel.Visible = true;
+                       Pancard_Panel.Visible = false;
+                       Payment_panel.Visible = true;
+                       Download_panel.Visible = false;
+                       UTI.Visible = true;
+                   }
 
-            else
-            {
-                Response.Redirect("Agent_Login1.aspx");
 
-            }
+                     ////////// Member / Distributor Visiblity ///////////
+                   if (Session["member_type"].ToString() == "Master_Distributor")
+                   {
+                       Panel_dist.Visible = true;
+                       Payment_panel.Visible = true;
+                   }
+                   else
+                   {
+                       Panel_dist.Visible = false;
+                       Payment_panel.Visible = false;
+                   }
 
-        }
+               }
 
+               else
+               {
+                   Response.Redirect("Agent_Login1.aspx");
+
+               }
+
+           }
+       }
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
             Session.Abandon();
