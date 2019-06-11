@@ -44,37 +44,6 @@ namespace WebApplication1
 
 
 
-           // string message="";
-           // SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
-          
-           // smtpClient.Credentials = new System.Net.NetworkCredential("ankiemittal@gmail.com", "ammaappa@@@@21122004");
-           // smtpClient.UseDefaultCredentials = false;
-           //// smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-           // smtpClient.EnableSsl = true;
-           // MailMessage mail = new MailMessage();
-
-           // //Setting From , To and CC
-           // mail.From = new MailAddress("ankiemittal@gmail.com");
-           // mail.To.Add(new MailAddress(textbox2.Text));
-           // mail.CC.Add(new MailAddress(textbox3.Text));
-           // mail.Body = message;
-            
-           // smtpClient.Send(mail);
-           // this.ClientScript.RegisterStartupScript(this.GetType(), "SweetAlert", "swal('Hurray!', 'Your Message sent successfully!', 'success');", true);
-           ////string text1 = "ankiemittal@gmail.com";
-           // MailMessage mailObj = new MailMessage(textbox2.Text, text1, textbox3.Text, textbox4.Text);
-           // SmtpClient SMTPServer = new SmtpClient("127.0.0.1");
-           // try
-           // {
-           //     SMTPServer.Send(mailObj);
-           //      this.ClientScript.RegisterStartupScript(this.GetType(), "SweetAlert", "swal('Hurray!', 'Your Message sent successfully!', 'success');", true);
-          
-
-           // }
-           // catch (Exception ex)
-           // {
-           //     label1.Text = ex.ToString();
-           // }
         }
 
            
