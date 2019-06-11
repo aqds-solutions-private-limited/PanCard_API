@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="PenCardApi_Solutions.Site2" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="PenCardApi_Solutions.Site2" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -25,12 +25,14 @@
     <link href="vendor/vector-map/jqvmap.min.css" rel="stylesheet" media="all" />
 
     <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
 
 
      <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all"/>
     <link href="css/main_add_mem.css" rel="stylesheet" media="all" />
+    <link href="css/util.css" rel="stylesheet" media="all" />
+    z
 
         <!-- Sweet Alert -->
   
@@ -42,8 +44,8 @@
           <!-- Jquery JS-->
     
      <!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -182,15 +184,16 @@
                                      </div>
 
                                     </div>
-                                  
+                                     //////PANEL 1 ENDING TAG////////////
 
                                     </asp:Panel  --%>
+                                 
 
-                                    <div class="setting-menu js-right-sidebar d-none d-lg-block">
+                              <%--      <div class="setting-menu js-right-sidebar d-none d-lg-block">
                                     <div class="account-dropdown__body">
 
 
-                                    <asp:Panel ID="Panel2" runat="server" Visible ="true">
+                                    <asp:Panel ID="Panel2" runat="server" Visible ="false">
                                      
                                        <div class="panel-heading">
                                        <h3 class="panel-title">Pancard Commission</h3>
@@ -245,12 +248,11 @@
                                            
                                      </asp:Panel>
                                      </div>
-                                     </div>
+                                     </div> --%>
                                     <asp:Panel ID="Panel3" runat="server"></asp:Panel>
-                                    <asp:Panel ID="Panel4" runat="server"></asp:Panel>
+                                    <asp:Panel ID="Panel4" runat="server" Visible="">
 
-
-                                       <div class="account-dropdown__item">
+                                      <div class="account-dropdown__item">
                                            <asp:Label ID="Label3" runat="server" Text="Name"></asp:Label>
                                         </div>
                                         <div class="account-dropdown__item">
@@ -259,7 +261,7 @@
                                         <div class="account-dropdown__item">
                                            <asp:Label ID="Label6" runat="server" Text="Email"></asp:Label>
                                         </div>
-                                    </div>
+                                   
                                     <h3> Bank Details</h3>
                                     <div class="account-dropdown__body">
                                         <div class="account-dropdown__item">
@@ -271,7 +273,11 @@
                                         <div class="account-dropdown__item">
                                             <asp:Label ID="Label9" runat="server" Text="Payment Link"></asp:Label>
                                         </div>
-                            </div>
+                                        </div>
+                                        </asp:Panel>
+                            
+                        </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -287,16 +293,23 @@
                         <div >
                             <i class = "fa fa-user" style= "font-size:50px"></i>
                         </div>
+                   <!--     <div class="image img-cir img-120">
+                            <img src="images/icon/avatar-big-01.jpg" alt="John Doe" />
+                        </div> --->
                         <h4 class="name"><asp:Label ID="Label1" runat="server" Text="USER NAME"></asp:Label></h4>
                         <asp:Label runat="server" ID="Lbl_mem" Text="MEMBER TYPE"></asp:Label>
                         <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">Sign out</asp:LinkButton>
                     </div>
                     <nav class="navbar-sidebar2">
                         <ul class="list-unstyled navbar__list">
+                        <asp:Panel ID="Dash_Panel" runat="server">
                             <li>
                                 <a href="WebForm2.aspx">
                                     <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                             </li>
+                            </asp:Panel>
+                        
+                            <asp:Panel ID="Member_Panel" runat="server">
                             <li class=" has-sub">
                                 <a class="js-arrow" href="#">
                                     <i class="fa fa-users"></i>Members
@@ -304,21 +317,46 @@
                                         <i class="fas fa-angle-down"></i>
                                     </span>
                                 </a>
+                                
                                 <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <asp:Panel ID="Panel_add_mem" runat="server">
                                     <li>
                                         <a href="WebForm3.aspx">
                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add Members</a>
                                     </li>
+                                    </asp:Panel>
+                                    <asp:Panel ID="Panel_dist" runat="server">
                                     <li>
                                         <a href="WebForm6.aspx">
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Distributors</a>
                                     </li>
+                                    </asp:Panel>
                                     <li>
                                         <a href="retailer.aspx">
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Retailers</a>
                                     </li>
                                 </ul>
-                            </li>
+                                 </li>
+                                </asp:Panel>
+                                <asp:Panel ID="Download_panel" runat = "server">
+                                  <li class=" has-sub">
+                                <a class="js-arrow" href="#">
+                                    <i class="fa fa-download"></i>Download
+                                    <span class="arrow">
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+                                </a>
+                                
+                                <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                        <a href="#">
+                                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Utility Software</a>
+                                    </li>
+                                    </ul>
+                                </li>
+                                </asp:Panel>
+
+                           <asp:Panel ID="Payment_panel" runat = "server">
                             <li class=" has-sub">
                                 <a class="js-arrow" href="#">
                                     <i class="fa fa-inr"></i>Payment
@@ -328,6 +366,7 @@
                                 </a>
                                  <span class="inbox-num">0</span>
                                 <ul class="list-unstyled navbar__sub-list js-sub-list">
+                               
                                     <li>
                                         <a href="#">
                                             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Fund T/R </a>
@@ -348,6 +387,7 @@
 
                                 </ul>
                             </li>
+                            </asp:Panel>
                             <li class="active has-sub">
                                 <a class="js-arrow" href="#">
                                     <i class="fa fa-info"></i>Services
@@ -358,11 +398,11 @@
                                 <ul class="list-unstyled navbar__sub-list js-sub-list">
                                     <li>
                                         <a href="#">
-                                             &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; Online Money Transfer</a>
+                                             &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  Money Transfer</a>
                                     </li> 
                                     <li>
                                         <a href="#">
-                                             &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; Online Bill Payment </a>
+                                             &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  Bill Payment </a>
                                     </li>
                                      <li>
                                         <a href="#">
@@ -372,34 +412,49 @@
                                         <a href="#">
                                              &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; Aeps Services Provider</a>
                                     </li>  
-                                     <li class="active has-sub">
-                                          <a class="js-arrow" href="#">
-                                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NSDL Pancard
+                                     <li>
+                                          <a href="#">
+                                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NSDL Pancard </a>                            
+                                     </li>
+                                      <asp:Panel ID="UTI" runat="server">
+                                       <li>
+                                          <a href="#">
+                                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; UTI Pancard </a>                            
+                                     </li>
+                                     </asp:Panel>
+                           
+                               <asp:Panel ID="Pancard_Panel" runat="server">
+                             <li class="active has-sub">
+                             
+                                <a class="js-arrow" href="#">
+                                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  UTI Pancard
+                                  
                                     <span class="arrow">
                                         <i class="fas fa-angle-down"></i>
                                     </span>
                                 </a>
-                                
-                                <ul class="list-unstyled js-sub-list">
-                                    <li>
+
+                                <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
                                         <a href="#">
-                                            &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; New Pancard </a>
+                                        &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PSA Registration</a>
                                     </li>
-                                    <li>
+                                     <li>
+                                        <a href="https://www.psaonline.utiitsl.com/psaonline/">
+                                         &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PSA Login</a>
+                                    </li>
+                                     <li>
                                         <a href="#">
-                                            &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; Correction List</a>
+                                         &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Purchase Token</a>
                                     </li>
-                                   
                                     </ul>
-                            </li>
-                             <li>
-                                        <a href="#">
-                                             &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; UTI Pancard</a>
-                                    </li>  
-                                                                      
+                                    
+                                </li>  
+                                </asp:Panel>                    
                                 </ul>
                             </li>
-
+                            
+                           
 
                             <li class="has-sub">
                                 <a class="js-arrow" href="#">
@@ -431,6 +486,11 @@
                                 <a href="#">
                                     <i class="fas fa-file-text"></i>Account Statement</a>
                             </li>
+                             <li>
+                                <a href="#">
+                                    <i class="fas fa-comment-o"></i>Complain</a>
+                            </li>
+
                             <li class="has-sub">
                                 <a class="js-arrow" href="#">
                                     <i class="fa fa-cogs"></i>Settings
@@ -450,75 +510,6 @@
                                 </ul>
                             </li>
                          
-                              <!--  <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                    <li>
-                                        <a href="login.html">
-                                            <i class="fas fa-sign-in-alt"></i>Login</a>
-                                    </li>
-                                    <li>
-                                        <a href="register.html">
-                                            <i class="fas fa-user"></i>Register</a>
-                                    </li>
-                                    <li>
-                                        <a href="forget-pass.html">
-                                            <i class="fas fa-unlock-alt"></i>Forget Password</a>
-                                    </li>
-                                </ul> -->
-                           
-                             <!-- <li class="has-sub">
-                                <a class="js-arrow" href="#">
-                                    <i class="fas fa-desktop"></i>UI Elements
-                                    <span class="arrow">
-                                        <i class="fas fa-angle-down"></i>
-                                    </span>
-                                </a>
-                                <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                    <li>
-                                        <a href="button.html">
-                                            <i class="fab fa-flickr"></i>Button</a>
-                                    </li>
-                                    <li>
-                                        <a href="badge.html">
-                                            <i class="fas fa-comment-alt"></i>Badges</a>
-                                    </li>
-                                    <li>
-                                        <a href="tab.html">
-                                            <i class="far fa-window-maximize"></i>Tabs</a>
-                                    </li>
-                                    <li>
-                                        <a href="card.html">
-                                            <i class="far fa-id-card"></i>Cards</a>
-                                    </li>
-                                    <li>
-                                        <a href="alert.html">
-                                            <i class="far fa-bell"></i>Alerts</a>
-                                    </li>
-                                    <li>
-                                        <a href="progress-bar.html">
-                                            <i class="fas fa-tasks"></i>Progress Bars</a>
-                                    </li>
-                                    <li>
-                                        <a href="modal.html">
-                                            <i class="far fa-window-restore"></i>Modals</a>
-                                    </li>
-                                    <li>
-                                        <a href="switch.html">
-                                            <i class="fas fa-toggle-on"></i>Switchs</a>
-                                    </li>
-                                    <li>
-                                        <a href="grid.html">
-                                            <i class="fas fa-th-large"></i>Grids</a>
-                                    </li>
-                                    <li>
-                                        <a href="fontawesome.html">
-                                            <i class="fab fa-font-awesome"></i>FontAwesome</a>
-                                    </li>
-                                    <li>
-                                        <a href="typo.html">
-                                            <i class="fas fa-font"></i>Typography</a>
-                                    </li>
-                                </ul>
-                            </li> -->
                         </ul>
                     </nav>
                 </div>
