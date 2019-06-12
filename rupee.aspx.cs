@@ -22,6 +22,7 @@ public partial class rupee : System.Web.UI.Page
         if (!Page.IsPostBack)
         {
             getdata();
+            getdata1();
         }
 
     }
@@ -47,6 +48,34 @@ public partial class rupee : System.Web.UI.Page
             Label3.Text = dt.Rows[0]["Postal_Address"].ToString();
             Label5.Text = dt.Rows[0]["mobile_no"].ToString();
            // Label6.Text = dt.Rows[0]["Email"].ToString();
+            //Label7.Text = dt.Rows[0]["Add Amount"].ToString();
+            //Label8.Text = dt.Rows[0]["Remark"].ToString();
+
+        }
+
+    }
+    public void getdata1()
+    {
+
+        dt.Clear();
+        dt.Rows.Clear();
+        if (con.State == ConnectionState.Open)
+        {
+            con.Close();
+        }
+        con.Open();
+
+        SqlCommand cmd = new SqlCommand("select * from add_member where id='" + id + "'", con);
+        SqlDataAdapter ad = new SqlDataAdapter(cmd);
+        ad.Fill(dt);
+        con.Close();
+        if (dt.Rows.Count > 0)
+        {
+            //  Label1.Text = dt.Rows[0]["Current Balance"].ToString();
+            Label2.Text = dt.Rows[0]["Name"].ToString();
+            Label3.Text = dt.Rows[0]["Postal_Address"].ToString();
+            Label5.Text = dt.Rows[0]["mobile_no"].ToString();
+           
             //Label7.Text = dt.Rows[0]["Add Amount"].ToString();
             //Label8.Text = dt.Rows[0]["Remark"].ToString();
 
