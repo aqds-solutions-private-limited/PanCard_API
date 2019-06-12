@@ -209,15 +209,9 @@
 
             <br />
 
-             <div class="row">
-            <div class="col-md-6  p-r-250"  style="padding-left:70px; background-color:Red;">
-                 <asp:Button ID="Proceed" runat="server" Text="Submit" BackColor="blue" ForeColor="white" Width="90px" Height="50px" CssClass="float-l" onclick="Proceed_Click" />
-                 
-            </div>
-            <div class="col-md-6"  style="font-size: large; font-weight: bolder; padding-left:200px;">
-                 <asp:Button ID="Close" runat="server" Text="Close" BackColor="blue" ForeColor="white" Width="90px" Height="50px" onclick="Close_Click" />
-            </div>
-            </div>
+         <div style="float:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button3" runat="server" Text="Submit" BackColor="blue" ForeColor="white" Width="90px" Height="50px" CssClass="float-l" onclick="Proceed_Click" />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <asp:Button ID="Button2" runat="server" Text="Close" BackColor="blue" ForeColor="white" Width="90px" Height="50px" onclick="Close_Click" />  </div>
 
              <br />
 
