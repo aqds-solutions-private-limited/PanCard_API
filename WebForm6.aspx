@@ -145,20 +145,13 @@
             </asp:TemplateField>
 
             
-           <asp:TemplateField HeaderText="Action" Visible="true" ControlStyle-Width="70" HeaderStyle-CssClass="align_center" >
+         <asp:TemplateField HeaderText="Action" Visible="true" ControlStyle-Width="70" HeaderStyle-CssClass="align_center">
             <ItemTemplate>
-                <asp:Panel ID="Action_dist" runat="server" CssClass="pos3">
-              <h5> payment menu</h5>
-                    <asp:LinkButton ID="LinkButton3" runat="server"><i class="fa fa-rupee">Fund Transfer/Return</i></asp:LinkButton>
-                <h5>id stock</h5>
-                    <asp:LinkButton ID="LinkButton4" runat="server"><i class="fa fa-user-plus ">Add Id Stock</i></asp:LinkButton>
-                    <h5>charges/commission</h5>
-                    <asp:LinkButton ID="LinkButton5" runat="server"><i class="fa fa-rupee">Pancard</i></asp:LinkButton>
-                </asp:Panel>
-        
+                <asp:HyperLink ID="HyperLink1" runat="server"  NavigateUrl='<%#"rupee.aspx?Agent id="+DataBinder.Eval(Container.DataItem,"id") %>'>Action</asp:HyperLink>   
              </ItemTemplate>
             </asp:TemplateField>
-         
+
+
     </Columns>
 </asp:GridView>
 </center>
