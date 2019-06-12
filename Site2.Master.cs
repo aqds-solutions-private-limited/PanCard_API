@@ -26,6 +26,7 @@ namespace PenCardApi_Solutions
                    log_id = Session["Agent_id"].ToString();
                    Label1.Text = Session["username"].ToString();
                    Lbl_mem.Text = Session["member_type"].ToString();
+                     Image1.ImageUrl = Session["img"].ToString();
 
                             
                    /////////Member Panel Visiblity &&   Pancard Menu Visiblity///////////
