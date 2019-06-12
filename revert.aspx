@@ -1,7 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.master" AutoEventWireup="true" CodeFile="revert.aspx.cs" Inherits="revert" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
- <style type="text/css">
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="revert.aspx.cs" Inherits="PenCardApi_Solutions.revert" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<style type="text/css">
                 .pos1
             {   position:absolute;
                 left:596px;
@@ -52,11 +51,63 @@
         }
             </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<div class="p-t-150">
+  <asp:ScriptManager ID="ScriptManager1" runat="server">     
+     
+    </asp:ScriptManager>
+<!-- BREADCRUMB-->
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <Triggers>
+    
+    
+    </Triggers>
+   <ContentTemplate>
+   
+            <section class="au-breadcrumb m-t-75">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="au-breadcrumb-content">
+                                    <div class="au-breadcrumb-left">
+                                        <span class="au-breadcrumb-span">You are here:</span>
+                                        <ul class="list-unstyled list-inline au-breadcrumb__list">
+                                            <li class="list-inline-item active">
+                                                <a href="#">Home</a>
+                                            </li>
+                                            <li class="list-inline-item seprate">
+                                                <span>/</span>
+                                            </li>
+                                            <li class="list-inline-item">Dashboard / Revert Balance</li>
+                                        </ul>
+                                    </div>
+                                  <!--  <button class="au-btn au-btn-icon au-btn--green">
+                                        <i class="zmdi zmdi-plus"></i>add item</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END BREADCRUMB-->
+
+            <div class="page-wrapper bg-sky p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+              
+                
+                <div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Revert Balance</h3>
+            </div>
+         
+
+<div class="p-t-150 form-group">
 <center>
-<h2>Revert Balance</h2>
+
 <table id="table1"    
             
             style="border-color: #C0C0C0;  border-bottom: 1px solid #ddd; border-style: ridge none groove none; border-width: 1px medium 1px medium; width:78%; height: 108px; direction:ltr; margin-left: 61px; list-style-type: sha; "  >
@@ -93,19 +144,13 @@
   <tr>
     <td class="style9"><b style="font-size: large; font-weight: bolder">Revert Amount</b></td>
     <td class="style9" style="font-size: large; font-weight: bolder">
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>
-  </tr>
-
-   <tr>
-    <td class="style9"><b style="font-size: large; font-weight: bolder">Transaction Password</b></td>
-    <td class="style9" style="font-size: large; font-weight: bolder">
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox></td>
+        <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control"></asp:TextBox></td>
   </tr>
 
   <tr>
     <td class="style11"><b style="font-size: large; font-weight: bolder">Remark</b></td>
     <td class="style11" style="font-size: large; font-weight: bolder">
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></td>
+        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox></td>
   </tr>      
   </table><br />
   <br />
@@ -115,11 +160,67 @@
         oncheckedchanged="CheckBox1_CheckedChanged" />
 </div>
 <div class="col=lg-6 style11 p-r-250"  style="font-size: large; font-weight: bolder">
-   <asp:Button ID="Button2" CssClass="style11" runat="server" Text="Submit" BackColor="blue" ForeColor="white" Width="90px" Height="50px" />
+   <asp:Button ID="Button2" CssClass="style11" runat="server" Text="Submit" BackColor="blue" ForeColor="white" Width="90px" Height="50px" OnClick="Button1_Click" />
    </div>
   </center>
   
     </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    
+  <!------------OTP PANEL-------------------->
+  <asp:Panel ID="Panel_otp" runat="server" style="height:150px; width:350px; background-color:White; position:relative; bottom:400px; margin-left:300px;" visible="false">
+    
+              
+                
+                <div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">OTP Confirmation</h3>
+            </div>
+            <br />
+            <br />
+
+            <div class="row">
+            <div class="col-md-6">
+            <asp:Label ID="otp" runat="server" Text="OTP" CssClass="newStyle1" style=" padding-left:50px;"></asp:Label>
+            &nbsp; &nbsp;
+            <asp:Label ID="Label4" runat="server" Text=":" CssClass="newStyle1" style=" padding-left:50px;"></asp:Label>
+            </div>
+            <div class="col-md-5">
+            <asp:TextBox ID="TextBox3" runat="server" CssClass= "form-control"></asp:TextBox>
+            </div>
+            </div>
+
+            <br />
+
+             <div class="row">
+            <div class="col-md-6  p-r-250"  style="padding-left:70px; background-color:Red;">
+                 <asp:Button ID="Proceed" runat="server" Text="Submit" BackColor="blue" ForeColor="white" Width="90px" Height="50px" CssClass="float-l" onclick="Proceed_Click" />
+                 
+            </div>
+            <div class="col-md-6"  style="font-size: large; font-weight: bolder; padding-left:200px;">
+                 <asp:Button ID="Close" runat="server" Text="Close" BackColor="blue" ForeColor="white" Width="90px" Height="50px" onclick="Close_Click" />
+            </div>
+            </div>
+
+             <br />
+
+                   <asp:Label ID="Label7" runat="server" CssClass="newStyle1" style=" padding-left:50px; color:Red;"></asp:Label>      
+            </div>
+            </div>
+            </div>
+          </asp:Panel>
+
+
+    
+    </ContentTemplate>
+    </asp:UpdatePanel>
   
 </asp:Content>
-
