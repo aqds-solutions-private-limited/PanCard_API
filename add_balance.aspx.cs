@@ -113,7 +113,7 @@ namespace PenCardApi_Solutions
                     con.Open();
                     cmd = new SqlCommand("add_balance", con);
                     cmd.CommandType = CommandType.StoredProcedure;
-
+                    cmd.Parameters.AddWithValue("@Agent_id",id);
                     cmd.Parameters.AddWithValue("@username", Label5.Text);
 
                     cmd.Parameters.AddWithValue("@wallet", TextBox2.Text);
