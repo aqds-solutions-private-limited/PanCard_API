@@ -290,12 +290,10 @@
                 </div>
                 <div class="menu-sidebar2__content js-scrollbar2">
                     <div class="account2">
-                        <div >
-                            <i class = "fa fa-user" style= "font-size:50px"></i>
+                        <div class="image img-cir img-120">
+                            <asp:Image ID="Image1" runat="server"  ImageUrl="~/img/author.jpg"></asp:Image>
                         </div>
-                   <!--     <div class="image img-cir img-120">
-                            <img src="images/icon/avatar-big-01.jpg" alt="John Doe" />
-                        </div> --->
+                   
                         <h4 class="name"><asp:Label ID="Label1" runat="server" Text="USER NAME"></asp:Label></h4>
                         <asp:Label runat="server" ID="Lbl_mem" Text="MEMBER TYPE"></asp:Label>
                         <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">Sign out</asp:LinkButton>
