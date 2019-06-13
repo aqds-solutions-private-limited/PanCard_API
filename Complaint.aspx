@@ -98,11 +98,54 @@
                 </div>
                 
                
+                 <br />
+                <br />
+               
                 
 		    </div>
         </div>
-        
-  
+         </asp:Panel>
+
+         <center>
+         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" 
+        Width="824px" 
+         onselectedindexchanged="GridView1_SelectedIndexChanged" Height="36px">
+      
+    <Columns>
+          
+          <asp:TemplateField HeaderText="Name" Visible="true"  HeaderStyle-CssClass="align_center">
+            <ItemTemplate>
+                <asp:TextBox ID="TextBox1" runat="server"  Text='<%# Eval("Name") %>' Enabled="false"></asp:TextBox> 
+            </ItemTemplate>
+            </asp:TemplateField>
+        <asp:TemplateField HeaderText="Mobile" Visible="true" HeaderStyle-CssClass="align_center">
+            <ItemTemplate>
+                <asp:TextBox ID="TextBox2" runat="server"  Text='<%# Eval("Mobile") %>' Enabled="false"></asp:TextBox>
+             </ItemTemplate>
+            </asp:TemplateField>
+             <asp:TemplateField HeaderText="Email" Visible="true"  HeaderStyle-CssClass="align_center">
+            <ItemTemplate>
+                <asp:TextBox ID="TextBox3" runat="server"  Text='<%# Eval("Email") %>' Enabled="false"></asp:TextBox>  
+            </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Complaint Reason" HeaderStyle-CssClass="align_center">
+             <ItemTemplate>
+          <asp:TextBox ID="TextBox1" runat="server"   Text='<%# Eval("complaint_Reason") %>' Enabled="false"></asp:TextBox>
+          </ItemTemplate>
+          </asp:TemplateField>
+         
+          <asp:TemplateField HeaderText="Complaint" Visible="true"  HeaderStyle-CssClass="align_center">
+            <ItemTemplate>
+                <asp:TextBox ID="TextBox4" runat="server"  Text='<%# Eval("Complaint") %>' Enabled="false"></asp:TextBox>
+             </ItemTemplate>
+            </asp:TemplateField>
+ 
+         
+    </Columns>
+
+</asp:GridView>
+ </center>
+ 
     </div>
     </div>
     </div>
@@ -113,4 +156,3 @@
 
     </div>
 </asp:Content>
-
