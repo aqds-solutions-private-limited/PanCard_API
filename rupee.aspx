@@ -53,15 +53,22 @@
             </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
-         
-   <div class="p-t-150">
-<center>
-<h2>DMT WALLET TRANSFER</h2>
-<br />
-<br />
-<table id="table1"    
-            
-            style="border-color: #C0C0C0;  border-bottom: 1px solid #ddd; border-style: ridge none groove none; border-width: 1px medium 1px medium; width:78%; height: 108px; direction:ltr; margin-left: 61px; list-style-type: sha; "  >
+  
+<<div class="page-wrapper bg-sky p-t-100 p-b-100 font-robo">
+  <div class="wrapper wrapper--w680">
+    <div class="card card-1">
+       <div class="row">
+         <div class="col-md-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+            <div class="panel-title"> 
+                <h3 style="color:White">DMT WALLET TRANSFER</h3>
+                </div></div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    
+<table id="table1" style="border-color: #C0C0C0;  border-bottom: 1px solid #ddd; border-style: ridge none groove none; border-width: 1px medium 1px medium; width:78%; height: 108px; direction:ltr; margin-left: 61px; list-style-type: sha; "  >
    
   
   <tr class="">
@@ -105,14 +112,23 @@
   </table>
     <br />
   <br />
-  <div class="col=lg-6  p-l-250 style11 " style="font-size: large; font-weight: bolder; float:left">
+  <div class="col-lg-6  p-l-250 style11 " style="font-size: large; font-weight: bolder; float:left">
     <asp:CheckBox ID="CheckBox2" CssClass="style10" runat="server" Text="Credit"   
         oncheckedchanged="CheckBox1_CheckedChanged" />
 </div>
-<div class="col=lg-6 style11 p-r-250"  style="font-size: large; font-weight: bolder">
+<div class="col-lg-6 style11 p-r-250"  style="font-size: large; font-weight: bolder">
    <asp:Button ID="Button2" CssClass="style11" runat="server" Text="Submit" BackColor="blue" ForeColor="white" Width="90px" Height="50px" />
+
    </div>
-  </center>
+   <br />
+   <br />
+   <b />
+   <br />
+   <br />
+ 
+
+   </div>
+   </div>
    </div>
 </asp:Content>
 
