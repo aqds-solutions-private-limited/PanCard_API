@@ -12,10 +12,16 @@ public partial class Complaint : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+    try
+    {
      string name = Session["username"].ToString();
         SqlConnection con = new SqlConnection("Data Source=Abc-PC\\SQLEXPRESS;Initial Catalog=API-DB;Integrated Security=True;Pooling=False");
         SqlCommand cmd = new SqlCommand();
  
+  if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
     con.Open();
    
       
@@ -26,6 +32,8 @@ public partial class Complaint : System.Web.UI.Page
     
     cmd.ExecuteNonQuery();
    con.Close();
-
+}
+catch(Exception ex)
+{}
     }
 }
