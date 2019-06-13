@@ -50,13 +50,46 @@ namespace PenCardApi_Solutions
                     }
                 }
                 else
+                {
                     GridView1.Visible = false;
+        }
+       DataTable dt1 = new DataTable();
+            DropDownList DropDownList1 = new DropDownList();
+            con.Open();
+           
+            string get1 = "SELECT [name]+' |'+ [member_type] as name, mobile_no as id FROM add_member where member_type != 'Retailer'";
+            SqlCommand cmd1 = new SqlCommand(get1, con);
+            SqlDataAdapter ad1 = new SqlDataAdapter(cmd1);
+            ad1.Fill(dt1);
+            con.Close();
+            if (dt1.Rows.Count > 0)
+            {
+                for (int i = 0; i < GridView1.Rows.Count; i++)
+                {
+                    DropDownList1 = (DropDownList)GridView1.Rows[i].FindControl("DropDownList1");
+                    DropDownList1.DataSource = dt1;
+                    DropDownList1.Items.Add(new ListItem("Select", "0"));
+                    DropDownList1.DataTextField = "name";
+                    DropDownList1.DataValueField = "id";
+                    DropDownList1.DataBind();
+
+                }
         
+            }
+            else
+            {
+            }
+
+
+        }
+        else
+        {
+            Response.Redirect("Agent_Login.aspx");
+        }
     }
     
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
 
-    }
     }
 }
