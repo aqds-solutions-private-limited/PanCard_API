@@ -5,7 +5,8 @@
 
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
+
 
     <!-- BREADCRUMB-->
             <section class="au-breadcrumb m-t-75">
@@ -75,76 +76,127 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
 
+
+
                   <div class="page-wrapper bg-sky p-t-40 p-b-100 font-robo">  
        
-       
-          <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false"
+             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"
         Width="950px" CssClass="left-margin" 
-         onselectedindexchanged="GridView1_SelectedIndexChanged" Height="36px"  HorizontalAlign="Center">
-         
+         onselectedindexchanged="GridView1_SelectedIndexChanged" Height="36px"  
+                          HorizontalAlign="Center" CellPadding="4" ForeColor="#333333" 
+                          GridLines="Horizontal">
+      
+                 <AlternatingRowStyle BackColor="White" />
+      
     <Columns>
-          <asp:TemplateField HeaderText="sr. no"  ControlStyle-Width="25" HeaderStyle-CssClass="align_center">
+
+          <asp:TemplateField HeaderText="sr. no"  ControlStyle-Width="25" HeaderStyle-CssClass="align_center" ControlStyle-BackColor="White" >
             <ItemTemplate>
             <%#Container.DataItemIndex+1 %>
                <!-- <asp:TextBox ID="TextBox1" runat="server" Text='<%# Eval("Mobile") %>'></asp:TextBox> -->
             </ItemTemplate>
+
+<ControlStyle Width="25px"></ControlStyle>
+
+<HeaderStyle CssClass="align_center"></HeaderStyle>
             </asp:TemplateField>
-        <asp:TemplateField HeaderText="Agent id" ControlStyle-Width="70" HeaderStyle-CssClass="align_center">
+        <asp:TemplateField HeaderText="Agent id" ControlStyle-Width="70" HeaderStyle-CssClass="align_center" HeaderStyle-Height="30px">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox2" runat="server" Text='<%# Eval("Agent id") %>' Enabled="false"></asp:TextBox>
+                <asp:TextBox ID="TextBox2" runat="server" Text='<%# Eval("Agent id") %>' BackColor="White" Enabled="false" Height="30px" ></asp:TextBox>
              </ItemTemplate>
+
+<ControlStyle Width="70px"></ControlStyle>
+
+<HeaderStyle CssClass="align_center"></HeaderStyle>
             </asp:TemplateField>
-             <asp:TemplateField HeaderText="Agent Name" ControlStyle-Width="70" HeaderStyle-CssClass="align_center">
+             <asp:TemplateField HeaderText="Agent Name" ControlStyle-Width="70" HeaderStyle-CssClass="align_center" HeaderStyle-Height="30px">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox3" runat="server" Text='<%# Eval("Agent Name") %>' Enabled="false"></asp:TextBox>  
+                <asp:TextBox ID="TextBox3" runat="server" Text='<%# Eval("Agent Name") %>' BackColor="White"  Enabled="false" Height="30px"></asp:TextBox>  
             </ItemTemplate>
+
+<ControlStyle Width="70px"></ControlStyle>
+
+<HeaderStyle CssClass="align_center"></HeaderStyle>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Mobile" ControlStyle-Width="70" HeaderStyle-CssClass="align_center" >
-             <ItemTemplate>
-          <asp:TextBox ID="TextBox4" runat="server" Text='<%# Eval("Mobile") %>' Enabled="false"></asp:TextBox>
+             <ItemTemplate> 
+          <asp:TextBox ID="TextBox4" runat="server" Text='<%# Eval("Mobile") %>'  Enabled="false" BackColor="White"  Height="30px"></asp:TextBox>
           </ItemTemplate>
+         
+<ControlStyle Width="70px"></ControlStyle>
+
+<HeaderStyle CssClass="align_center"></HeaderStyle>
          
           </asp:TemplateField>
          
 
           <asp:TemplateField HeaderText="State" ControlStyle-Width="70" Visible="true" HeaderStyle-CssClass="align_center">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox5" runat="server" Text='<%# Eval("state") %>' Enabled="false"></asp:TextBox>
+                <asp:TextBox ID="TextBox5" runat="server" Text='<%# Eval("state") %>'  Enabled="false" BackColor="White" Height="30px"></asp:TextBox>
              </ItemTemplate>
+
+<ControlStyle Width="70px"></ControlStyle>
+
+<HeaderStyle CssClass="align_center"></HeaderStyle>
             </asp:TemplateField>
          
           <asp:TemplateField HeaderText="Join Date" ControlStyle-Width="70" Visible="true" HeaderStyle-CssClass="align_center">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox6" runat="server" Text='<%# Eval("Mobile") %>' Enabled="false"></asp:TextBox>
+                <asp:TextBox ID="TextBox6" runat="server" Text='<%# Eval("Mobile") %>'  Enabled="false" BackColor="White" Height="30px"></asp:TextBox>
              </ItemTemplate>
+
+<ControlStyle Width="70px"></ControlStyle>
+
+<HeaderStyle CssClass="align_center"></HeaderStyle>
             </asp:TemplateField>
 
              <asp:TemplateField HeaderText="Email Id" ControlStyle-Width="70" Visible="true" HeaderStyle-CssClass="align_center">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox7" runat="server" Text='<%# Eval("Email Id") %>' Enabled="false"></asp:TextBox>
+                <asp:TextBox ID="TextBox7" runat="server" Text='<%# Eval("Email Id") %>'  BackColor="White" Enabled="false" ></asp:TextBox>
              </ItemTemplate>
+
+<ControlStyle Width="70px"></ControlStyle>
+
+<HeaderStyle CssClass="align_center"></HeaderStyle>
             </asp:TemplateField>
          
          <asp:TemplateField HeaderText="Fos" ControlStyle-Width="70 " HeaderStyle-CssClass="align_center">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox8"  runat="server" Enabled="false"></asp:TextBox>
+               <asp:DropDownList ID="DropDownList1" runat="server" BackColor="White">
+                
+               
+               
+               </asp:DropDownList>
              </ItemTemplate>
+
+<ControlStyle Width="70px"></ControlStyle>
+
+<HeaderStyle CssClass="align_center"></HeaderStyle>
             </asp:TemplateField>
          
          <asp:TemplateField HeaderText="Balance" ControlStyle-Width="70" Visible="true" HeaderStyle-CssClass="align_center">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox9"  runat="server" Enabled="false"></asp:TextBox>
+                <asp:TextBox ID="TextBox9"  runat="server" Enabled="false" BackColor="White"></asp:TextBox>
              </ItemTemplate>
+
+<ControlStyle Width="70px"></ControlStyle>
+
+<HeaderStyle CssClass="align_center"></HeaderStyle>
             </asp:TemplateField>
          
            <asp:TemplateField HeaderText="Login" ControlStyle-Width="70" Visible="true" HeaderStyle-CssClass="align_center">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox10" runat="server" Enabled="false"></asp:TextBox>
+                <asp:TextBox ID="TextBox10" runat="server" Enabled="false" BackColor="White"></asp:TextBox>
              </ItemTemplate>
+
+<ControlStyle Width="70px"></ControlStyle>
+
+<HeaderStyle CssClass="align_center"></HeaderStyle>
             </asp:TemplateField>
           
            <asp:TemplateField HeaderText="Action"  Visible="true" HeaderStyle-CssClass="align_center" >
@@ -157,17 +209,25 @@
         
              </ItemTemplate>
             
+<HeaderStyle CssClass="align_center"></HeaderStyle>
+            
             </asp:TemplateField>
          
          
     </Columns>
+                 <EditRowStyle BackColor="#2461BF" />
+                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                 <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                 <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                 <RowStyle BackColor="#EFF3FB" />
+                 <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                 <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                 <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
 </asp:GridView>
 </div>
             </section>
             <!-- END STATISTIC-->
-            
-
-
-
 
 </asp:Content>
