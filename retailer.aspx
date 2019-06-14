@@ -65,9 +65,9 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Retailer List
                     <asp:LinkButton ID="LinkButton2" runat="server" CssClass="pull-right"><i class="fa fa-filter"></i> Filter</asp:LinkButton>
-                 <asp:Button ID="Button2" runat="server" CssClass="form-control pull-right" Text="New Request" style=" width:130px; position:absolute; left:800px; top:3px; background-color:inherit; color:White; border:inherit; font:Times New Roman; font-size:17px;"/> 
-                  
-               
+               <!-- <a class="pull-right mybtn  waves-effect m-l-15" href="#" id="export"> <i class="fa fa-download"></i> Export</a> -->
+                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="pull-right name"><i class="fa fa-plus"></i> New Request</asp:LinkButton>
+               <!-- <a class="pull-right mybtn waves-effect" href="WebForm3.aspx" target="_blank"><i class="fa fa-plus"></i> Add New</a></h3> -->
 
          </div>
  </div>
@@ -75,15 +75,13 @@
  </div>
        
 
-            <div class="container">
-          
+              <div class="container">
+          	
     <div class="row">
         <div class="col-sm-10">
-            <div class="panel panel-primary">
-            <div class="panel-body p-0">
-              
-              
-                    <form class="row" id="filter" action="">
+         
+            <div class="panel-body p-0">        
+                 <form class="row" id="filter" action="">
                       <!--  <div class="form-group col-md-3 m-b-0 hide">
                             <input type="text" name="from_date" placeholder="From Date" class="form-control date">
                         </div>
@@ -104,70 +102,100 @@
                     </form>
                 
 
-
-
-
-
-            
            
            
        <div class="page-wrapper bg-sky p-t-100 p-b-100 font-robo">  
        
        
-         
-             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" 
-        Width="824px" 
-         onselectedindexchanged="GridView1_SelectedIndexChanged" Height="36px" >
+         <center>
+             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+        Width="900px" 
+         onselectedindexchanged="GridView1_SelectedIndexChanged" Height="50px" 
+                 onrowcommand="GridView1_RowCommand" CellPadding="4" ForeColor="#333333" 
+                 GridLines="Horizontal"  >
+                 <EditRowStyle BackColor="#2461BF" />
+                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                 <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                 <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+         <RowStyle HorizontalAlign="Center" BackColor="#EFF3FB"/>
+                 <AlternatingRowStyle BackColor="White" />
     <Columns>
-          <asp:TemplateField HeaderText="Agent Id" Visible="true">
+          <asp:TemplateField HeaderText="Agent Id" Visible="true" ControlStyle-Width="50" HeaderStyle-CssClass="align_center" HeaderStyle-Height="30px">
             <ItemTemplate>
-                <asp:Label ID="Label1" runat="server" Text='<%# Eval("id") %>'></asp:Label>
+                <asp:TextBox ID="TextBox1" runat="server"  Text='<%# Eval("id") %>'  BackColor="White" Enabled="false" Height="30px"></asp:TextBox> 
             </ItemTemplate>
-            </asp:TemplateField>
-        <asp:TemplateField HeaderText="Personal Details" Visible="true">
-            <ItemTemplate>
-               <asp:Label ID="Label1" runat="server" Text='<%# Eval("pd") %>'></asp:Label>
-             </ItemTemplate>
-            </asp:TemplateField>
-             
-             <asp:TemplateField HeaderText="Parent Details" Visible="true" HeaderStyle-CssClass="pose3">
-            <ItemTemplate>
-            <asp:Label ID="Label1" runat="server" Text='<%# Eval("map_under") %>'></asp:Label>
-             </ItemTemplate>
-            </asp:TemplateField>
-                
 
-          <asp:TemplateField HeaderText="Wallet Balance" Visible="true">
+<ControlStyle Width="50px"></ControlStyle>
+
+<HeaderStyle CssClass="align_center"></HeaderStyle>
+            </asp:TemplateField>
+        <asp:TemplateField HeaderText="Personal Details" Visible="true" ControlStyle-Width="50" HeaderStyle-CssClass="align_center" HeaderStyle-Height="30px">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox2" runat="server" Text='<%# Eval("pd") %>' BackColor="White"  Height="30px" Enabled="false"></asp:TextBox>
              </ItemTemplate>
+
+<ControlStyle Width="50px"></ControlStyle>
+
+<HeaderStyle CssClass="align_center"></HeaderStyle>
+            </asp:TemplateField>
+             <asp:TemplateField HeaderText="Parent Details" Visible="true" ControlStyle-Width="70" HeaderStyle-CssClass="align_center"  HeaderStyle-Height="30px">
+            <ItemTemplate>
+                <asp:TextBox ID="TextBox3" runat="server" Text='<%# Eval("map_under") %>' BackColor="White"  Height="30px" Enabled="false"></asp:TextBox>  
+            </ItemTemplate>
+
+<ControlStyle Width="70px"></ControlStyle>
+
+<HeaderStyle CssClass="align_center"></HeaderStyle>
             </asp:TemplateField>
          
-         
-          <asp:TemplateField HeaderText="id Stock" Visible="true">
+
+          <asp:TemplateField HeaderText="Wallet Balance" Visible="true" ControlStyle-Width="70" HeaderStyle-CssClass="align_center" HeaderStyle-Height="30px">
             <ItemTemplate>
-                <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox4" runat="server" BackColor="White"  Height="30px" Enabled="false"></asp:TextBox>
              </ItemTemplate>
+
+<ControlStyle Width="70px"></ControlStyle>
+
+<HeaderStyle CssClass="align_center"></HeaderStyle>
+            </asp:TemplateField>
+
+             <asp:TemplateField HeaderText="id Stock" Visible="true" ControlStyle-Width="70" HeaderStyle-CssClass="align_center" HeaderStyle-Height="30px">
+            <ItemTemplate>
+                <asp:HyperLink ID="HyperLink1" runat="server"  NavigateUrl='<%#"rupee.aspx?Agent id="+DataBinder.Eval(Container.DataItem,"id") %>'>Action</asp:HyperLink>   
+             </ItemTemplate>
+
+<ControlStyle Width="70px"></ControlStyle>
+
+<HeaderStyle CssClass="align_center"></HeaderStyle>
             </asp:TemplateField>
 
             
-          <asp:TemplateField HeaderText="Action" Visible="true" ControlStyle-BorderWidth="20px" ControlStyle-BackColor="white">
+        <%--  <asp:TemplateField HeaderText="Action" Visible="true" ControlStyle-Width="90" HeaderStyle-CssClass="align_center" >
             <ItemTemplate>
-            
-             <asp:DropDownList ID="DropDownList1" runat="server" BackColor="White" >
-                <asp:ListItem Value="Action" Text=" Action"></asp:ListItem>
-                
-              <asp:ListItem Value="Fund Transfer/Return" Text="Transfer"></asp:ListItem>
-             <asp:ListItem Text="id stock"> </asp:ListItem>
-              
-               <asp:ListItem Text="charges/commission"> </asp:ListItem>
-                </asp:DropDownList>
+                <asp:Button ID="Button2" runat="server" Text="Action"  CommandArgument='<%#Eval("id") %>'/>
+                <asp:Panel ID="Action_dist" runat="server" CssClass="pos3" Visible="false">
+              <h5> payment menu</h5>
+                    <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%#Eval("id")%>'><i class="fa fa-rupee">Fund Transfer/Return</i></asp:LinkButton>
+                <h5>id stock</h5>
+                    <asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%#Eval("id") %>' ><i class="fa fa-user-plus ">Add Id Stock</i></asp:LinkButton>
+                    <h5>charges/commission</h5>
+                    <asp:LinkButton ID="LinkButton5" runat="server" CommandArgument='<%#Eval("id") %>' ><i class="fa fa-rupee">Pancard</i></asp:LinkButton>
+                </asp:Panel>
+         
              </ItemTemplate>
             </asp:TemplateField>
-         
+         --%>
          
     </Columns>
+    
+                 <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                 <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                 <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
+    
 </asp:GridView>
+</center>
 </div>
   
      </div>
@@ -181,6 +209,5 @@
                 </div>
                 </div>
                </div>
-            
 
 </asp:Content>
