@@ -226,8 +226,85 @@
                  <SortedDescendingCellStyle BackColor="#E9EBEF" />
                  <SortedDescendingHeaderStyle BackColor="#4870BE" />
 </asp:GridView>
+
+<asp:Panel ID="Panel1" runat="server">
+  <div class="section__content section__content--p30 p-t-200">
+                    <div class="container-fluid">
+                        <div class="row">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       
+                            <div class="col-md-6 col-lg-3">
+                                <div class="statistic__item">
+                                    <h2 class="number">1</h2> <br />
+                                    <span class="desc"> <b>Wallet Balance</b> </span>
+                                    <div class="icon">
+                                        <i class="zmdi zmdi-account-o"></i>
+                                    </div>
+                                </div>
+                            </div>
+                  
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <center>
+             <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" 
+        Width="824px" 
+         onselectedindexchanged="GridView2_SelectedIndexChanged" Height="36px" CellPadding="4" 
+                        ForeColor="#333333" GridLines="Horizontal">
+                 <AlternatingRowStyle BackColor="White" />
+    <Columns>
+          <asp:TemplateField HeaderText="#" Visible="true" HeaderStyle-CssClass="align_center">
+            <ItemTemplate>
+                <asp:TextBox ID="TextBox1" runat="server" Enabled="false" Height="40px" BackColor="White"></asp:TextBox> 
+            </ItemTemplate>
+            </asp:TemplateField>
+        <asp:TemplateField HeaderText="User Details" Visible="true" HeaderStyle-CssClass="align_center">
+            <ItemTemplate>
+                <asp:TextBox ID="TextBox2" runat="server" Enabled="false" Height="40px" BackColor="White"></asp:TextBox>
+             </ItemTemplate>
+            </asp:TemplateField>
+             <asp:TemplateField HeaderText="Parent Details" Visible="true" HeaderStyle-CssClass="align_center">
+            <ItemTemplate>
+                <asp:TextBox ID="TextBox3" runat="server" Enabled="false" Height="40px" BackColor="White"></asp:TextBox>  
+            </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Amount" HeaderStyle-CssClass="align_center" >
+             <ItemTemplate>
+          <asp:TextBox ID="TextBox1" runat="server" Enabled="false" Height="40px" BackColor="White"></asp:TextBox>
+          </ItemTemplate>
+          </asp:TemplateField>
+         
+
+          <asp:TemplateField HeaderText="Status" Visible="true" HeaderStyle-CssClass="align_center">
+            <ItemTemplate>
+                <asp:TextBox ID="TextBox4" runat="server" Enabled="false" Height="40px" BackColor="White"></asp:TextBox>
+             </ItemTemplate>
+            </asp:TemplateField>
+         
+         
+         
+    </Columns>
+
+                 <EditRowStyle BackColor="#7C6F57" />
+                 <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                 <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                 <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                 <RowStyle BackColor="#E3EAEB" />
+                 <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                 <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                 <SortedAscendingHeaderStyle BackColor="#246B61" />
+                 <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                 <SortedDescendingHeaderStyle BackColor="#15524A" />
+
+</asp:GridView>
+</center> 
+</asp:Panel>
 </div>
             </section>
             <!-- END STATISTIC-->
+
 
 </asp:Content>
